@@ -1,4 +1,4 @@
-import com.natpryce.hamkrest.assertion.assertThat
+import com.natpryce.hamkrest.assertion.*
 import com.natpryce.hamkrest.equalTo
 import org.junit.Test
 
@@ -14,5 +14,11 @@ class ClassesTest {
         assertThat(expectedGreet, equalTo(HappyBirthday(cj)))
         assertThat(34, equalTo(cj.age))
 
+    }
+
+    @Test
+    fun `identifies whether people are awesome or not`() {
+        assert(Person("CJ", 33).IsAwesome)
+        assert(!Person("DB", 34).IsAwesome)
     }
 }
