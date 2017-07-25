@@ -1,4 +1,4 @@
 
 fun helloWorld(): String {
-    return "foo"
+    return "Hello, world"
 }
