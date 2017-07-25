@@ -1,3 +1,5 @@
 
 /.idea/
 /learning-kotlin.iml
+/build/
+/out/
