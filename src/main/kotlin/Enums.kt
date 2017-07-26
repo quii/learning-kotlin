@@ -12,8 +12,6 @@ This is actually better than scala in that it doesnt compile if you dont cover a
 In Scala this is just a warning (at least in 2.10)
  */
 fun IsFlavourOfTheMonth(pl: ProgrammingLanguage): Boolean = when(pl) {
-    ProgrammingLanguage.Java -> false
-    ProgrammingLanguage.Kotlin -> true
-    ProgrammingLanguage.Rust -> true
-    ProgrammingLanguage.Scala -> false
+    ProgrammingLanguage.Java, ProgrammingLanguage.Scala -> false
+    ProgrammingLanguage.Kotlin, ProgrammingLanguage.Rust -> true
 }
