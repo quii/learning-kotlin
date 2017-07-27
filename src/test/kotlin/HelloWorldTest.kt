@@ -12,6 +12,6 @@ class HelloWorldTest {
 
     @Test
     fun `can say hello to specific people`() {
-        assertThat(helloWorld("CJ"), equalTo("Hello, CJ"))
+        assertThat(helloWorld(name = "CJ"), equalTo("Hello, CJ"))
     }
 }
