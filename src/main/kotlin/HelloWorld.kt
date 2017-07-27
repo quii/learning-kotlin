@@ -1,8 +1,3 @@
-
-fun helloWorld(): String {
-    return "Hello, world"
-}
-
-fun helloWorld(name: String): String {
+fun helloWorld(name: String = "world"): String {
     return "Hello, $name"
 }
