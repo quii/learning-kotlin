@@ -6,6 +6,8 @@ enum class ProgrammingLanguage {
     Java, Rust, Kotlin, Scala, CSharp, Go;
 }
 
+fun ProgrammingLanguage.ExtendMe(): String = "does this work? $this"
+
 /*
 This is actually better than scala in that it doesnt compile if you dont cover all the cases
 
