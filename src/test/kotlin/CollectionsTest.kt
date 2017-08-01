@@ -13,4 +13,9 @@ class CollectionsTest{
     fun `can find the highest number in a set`(){
         assertThat(10, equalTo(scores.max()))
     }
+
+    @Test
+    fun `can append poo to everything`(){
+        assertThat(listOf("apoo", "bpoo"), equalTo(addPooToAll("a", "b")))
+    }
 }

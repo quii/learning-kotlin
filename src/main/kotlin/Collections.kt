@@ -5,3 +5,7 @@ val people = hashMapOf(
 )
 
 val scores = setOf(1, 2, 10, 5)
+
+fun addPooToAll(vararg stuff: String): List<String> {
+    return stuff.map { x -> x + "poo" }
+}
