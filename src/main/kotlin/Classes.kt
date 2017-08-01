@@ -1,6 +1,6 @@
 
 // Very similar to scala
-class Person(val name: String, var age: Int) {
+class Person(val name: String, var age: Int, private val secret: String) {
 
     /* Custom accessors. Not much different from just writing a function. If the function describes the characteristic of a thing then it may be better to write a custom accessor*/
     val IsAwesome: Boolean
