@@ -15,4 +15,9 @@ class InterfacesTest {
         val js = JerrySeinfeld()
         assertThat("What's the deal with aeroplane food?", equalTo(js.tellAJoke()))
     }
+
+    @Test
+    fun `larry is a singleton`(){
+        assertThat("Larry David", equalTo(LarryDavid.name))
+    }
 }

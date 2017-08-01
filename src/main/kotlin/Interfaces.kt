@@ -16,3 +16,13 @@ class ChrisJames : Comedian {
     override val name: String
         get() = "Chris James"
 }
+
+object LarryDavid: Comedian{
+    override val name: String
+        get() = "Larry David"
+
+    override fun tellAJoke(): String {
+        return "I want to make small talk, medium talk, at least"
+    }
+
+}
