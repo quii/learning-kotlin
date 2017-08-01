@@ -21,4 +21,30 @@ class ClassesTest {
         assert(Person("CJ", 33, "whisper whisper").IsAwesome)
         assert(!Person("DB", 34, "psssstt").IsAwesome)
     }
+
+    @Test
+    fun `can use sideeffecty class to do fun things`(){
+        val thing = SideEffectyConstructors("pants")
+        assertThat("Poo pants", equalTo(thing.phrase))
+    }
+
+    @Test
+    fun `multiple constructors`(){
+        val a = MultipleConstructors("CJ")
+        val b = MultipleConstructors("DB")
+        val c = MultipleConstructors(5)
+
+        assertThat(10, equalTo(a.score))
+        assertThat(2, equalTo(b.score))
+        assertThat(5, equalTo(c.score))
+    }
+
+
+    @Test
+    fun `data classes provide toEquals amongst other boring things`(){
+        val scoreA = Score(10)
+        val scoreB = Score(10)
+
+        assertThat(scoreA, equalTo(scoreB))
+    }
 }

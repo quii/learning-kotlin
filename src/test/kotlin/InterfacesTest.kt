@@ -7,6 +7,7 @@ class InterfacesTest {
     fun `i dont know how to tell jokes but no worries because the interface i extend has one for me`() {
         val cj = ChrisJames()
         assertThat("knock knock", equalTo(cj.tellAJoke()))
+        assertThat("Chris James", equalTo(cj.name))
     }
 
     @Test
