@@ -1,5 +1,6 @@
 import com.natpryce.hamkrest.assertion.*
 import com.natpryce.hamkrest.equalTo
+import com.natpryce.hamkrest.should.shouldNotMatch
 import org.junit.Test
 
 class ClassesTest {
@@ -42,9 +43,10 @@ class ClassesTest {
 
     @Test
     fun `data classes provide toEquals amongst other boring things`(){
-        val scoreA = Score(10)
-        val scoreB = Score(10)
-
+        val scoreA = Score(10, "CJ")
+        val scoreB = Score(10, "CJ")
+        val scoreC = scoreB.copy(participant = "DB")
         assertThat(scoreA, equalTo(scoreB))
+        assertThat(scoreC, !equalTo(scoreB))
     }
 }
