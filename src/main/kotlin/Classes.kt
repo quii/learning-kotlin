@@ -8,8 +8,14 @@ class Person(val name: String, var age: Int, private val secret: String) {
 }
 
 //todo: return the score or 0 once ive seen how to handle the null thing
-fun findHighestScore(scores: List<Score>): Score?{
-    return scores.maxBy(Score::amount)
+fun findHighestScore(scores: List<Score>): Int{
+    val highscore = scores.maxBy(Score::amount)
+
+    if (highscore==null){
+        return 0
+    } else {
+        return highscore.amount
+    }
 }
 
 data class Score(val amount: Int, val participant: String)

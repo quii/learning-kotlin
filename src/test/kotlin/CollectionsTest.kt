@@ -39,6 +39,18 @@ class CollectionsTest{
                 Score(99, "PJB")
         )
 
-        assertThat(findHighestScore(scores), equalTo(Score(99, "PJB")))
+        assertThat(findHighestScore(scores), equalTo(99))
+    }
+
+    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    @Test
+    fun `i know the alphabet`() {
+        assertThat(alphabet, equalTo(aToZ()))
+    }
+
+    @Test
+    fun `i know the alphabet lowercased`() {
+        assertThat(alphabet.toLowerCase(), equalTo(aToZLower()))
     }
 }
