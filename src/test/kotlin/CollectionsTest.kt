@@ -42,6 +42,11 @@ class CollectionsTest{
         assertThat(findHighestScore(scores), equalTo(99))
     }
 
+    @Test
+    fun `it returns zero score if sent an empty collection`(){
+        assertThat(findHighestScore(listOf()), equalTo(0))
+    }
+
     val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     @Test
