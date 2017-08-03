@@ -7,6 +7,10 @@ class Person(val name: String, var age: Int, private val secret: String) {
         get() = name == "CJ"
 }
 
+fun findOldestPerson(scores: List<Score>): Score?{
+    return scores.maxBy(Score::amount)
+}
+
 data class Score(val amount: Int, val participant: String)
 
 //note: the IDE moans that this can be refactored into a simple declaration, the init syntax is helpful when you need a block to do more complicated stuff. But why would a constructor ever be complicated...

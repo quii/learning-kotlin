@@ -30,4 +30,15 @@ class CollectionsTest{
         val stuff = listOf("butts", "cats", "sweets", "cakes")
         assert(!doesPooExist(stuff))
     }
+
+    @Test
+    fun `it can find the highest score`(){
+        val scores = listOf(
+                Score(20, "CJ"),
+                Score(50, "RB"),
+                Score(99, "PJB")
+        )
+
+        assertThat(findOldestPerson(scores), equalTo(Score(99, "PJB")))
+    }
 }
