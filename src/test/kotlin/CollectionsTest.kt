@@ -18,4 +18,16 @@ class CollectionsTest{
     fun `can append poo to everything`(){
         assertThat(listOf("apoo", "bpoo"), equalTo(addPooToAll("a", "b")))
     }
+
+    @Test
+    fun `it can detect poo`() {
+        val stuff = listOf("butts", "cats", "poO", "cakes")
+        assert(doesPooExist(stuff))
+    }
+
+    @Test
+    fun `it can confirm no poo exists`() {
+        val stuff = listOf("butts", "cats", "sweets", "cakes")
+        assert(!doesPooExist(stuff))
+    }
 }
