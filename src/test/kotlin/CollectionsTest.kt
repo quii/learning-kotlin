@@ -39,6 +39,6 @@ class CollectionsTest{
                 Score(99, "PJB")
         )
 
-        assertThat(findOldestPerson(scores), equalTo(Score(99, "PJB")))
+        assertThat(findHighestScore(scores), equalTo(Score(99, "PJB")))
     }
 }

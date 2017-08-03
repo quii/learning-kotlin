@@ -7,7 +7,8 @@ class Person(val name: String, var age: Int, private val secret: String) {
         get() = name == "CJ"
 }
 
-fun findOldestPerson(scores: List<Score>): Score?{
+//todo: return the score or 0 once ive seen how to handle the null thing
+fun findHighestScore(scores: List<Score>): Score?{
     return scores.maxBy(Score::amount)
 }
 
